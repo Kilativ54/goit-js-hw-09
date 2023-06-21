@@ -48,7 +48,9 @@ function addLeadingZero(value) {
   return value.toString().padStart(2, '0');
 }
 
-btnStart.addEventListener('click', () => {
+btnStart.addEventListener('click', startTimer);
+
+function startTimer(){
   let timeInterval = setInterval(() => {
     let countdown = new Date(inputDate.value) - new Date();
     btnStart.disabled = true;
@@ -62,4 +64,4 @@ btnStart.addEventListener('click', () => {
       clearInterval(timeInterval);
     }
   }, 1000);
-});
+}
