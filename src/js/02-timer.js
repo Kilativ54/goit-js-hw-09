@@ -50,7 +50,7 @@ function addLeadingZero(value) {
 
 btnStart.addEventListener('click', startTimer);
 
-function startTimer(){
+function startTimer() {
   let timeInterval = setInterval(() => {
     let countdown = new Date(inputDate.value) - new Date();
     btnStart.disabled = true;
